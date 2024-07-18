@@ -16,19 +16,26 @@ const ListProduct: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [searchP, setSearchP] = useState<string>('');
-
+  
   useEffect(() => {
-    axios.get('http://34.71.240.100/api/product/list') //Apizinhaaa
-      .then(response => {
-        setProducts(response.data);
-        setLoading(false);
+       
+        // so pra armazenar no local
+        const localStorageProducts = localStorage.getItem('productData');
+        const parsedLocalProducts: IProduct[] = localStorageProducts ? JSON.parse(localStorageProducts) : [];
       })
-      .catch(error => {
-        setError('Falha ao carregar');
-        setLoading(false);
-      });
-  }, []);
-
+// validação da Api
+  // useEffect(() => {
+  //   axios.get('http://34.71.240.100/api/product/list') //Apizinhaaa
+  //     .then(response => {
+  //       setProducts(response.data);
+  //       setLoading(false);
+  //     })
+  //     .catch(error => {
+  //       setError('Falha ao carregar');
+  //       setLoading(false);
+  //     });
+  // }, []);
+// validação da Api
   const handleEdit = (product: IProduct) => {
     console.log('Editar produto', product);
   };
