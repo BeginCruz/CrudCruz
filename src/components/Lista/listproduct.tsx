@@ -23,7 +23,7 @@ const ListProduct: React.FC = () => {
         const localStorageProducts = localStorage.getItem('productData');
         const parsedLocalProducts: IProduct[] = localStorageProducts ? JSON.parse(localStorageProducts) : [];
       })
-
+// validação da Api
   // useEffect(() => {
   //   axios.get('http://34.71.240.100/api/product/list') //Apizinhaaa
   //     .then(response => {
@@ -35,7 +35,7 @@ const ListProduct: React.FC = () => {
   //       setLoading(false);
   //     });
   // }, []);
-
+// validação da Api
   const handleEdit = (product: IProduct) => {
     console.log('Editar produto', product);
   };
