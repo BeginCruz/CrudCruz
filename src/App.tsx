@@ -1,8 +1,8 @@
 
 import React from 'react';
-import ProductForm from './components/product/product';
+import ProductForm from './components/Product/product';
 import ListProduct from './components/Lista/listproduct';
-import NavBar from './components/navbar/navbar';
+import NavBar from './components/Navbar/navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App: React.FC = () => {

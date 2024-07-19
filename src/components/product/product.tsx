@@ -26,18 +26,18 @@ interface IProduct {
       localStorage.setItem('productData', JSON.stringify(data));
       console.log('Dados armazenados no localStorage:', data);
   
-      // Enviar para a Apizinha
-      // axios.post('http://34.71.240.100/api/product/create', data)
-      //   .then(response => {
-      //     console.log('Resposta da API:', response.data);
-      //   })
-      //   .catch(error => {
-      //     console.error('Erro ao enviar dados para a API:', error);
-      //   });
+  //     // Enviar para a Apizinha
+      axios.post('http://34.71.240.100/api/product/create', data)
+       .then(response => {
+       console.log('Resposta da API:', response.data);
+       })
+       .catch(error => {
+       console.error('Erro ao enviar dados para a API:', error);
+        });
 
   // const onSubmit: SubmitHandler<IProduct> = data => {
-  //   axios.post('http:34.71.240.100/api/product/create', data)
-  //   console.log(data);
+  // axios.post('http:34.71.240.100/api/product/create', data)
+  // console.log(data);
 
   };
   
